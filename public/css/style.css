@@ -1,67 +1,29 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.gallery {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(3, 300px); 
-    grid-template-rows: repeat(3, 300px);
-    grid-template-areas: 
-    "image1 image2 image2"
-    "image3 image2 image2"
-    "image4 image4 image4"
-    ;
-    margin: 3rem auto;
-    height: 930px;
-    width: 930px;
-}
-.gallery-image {
-    height: 100%;
-    width: 100%;
-    outline-offset: 0.1rem;
-    transition: 0.6s ease-in-out;
+
+.gallery-frame {
+  padding: .7rem;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #333;
+  color: white;
 }
 
-.gallery-image:hover {
-    outline: 1rem solid rgba(166, 241, 197, 0.5);
-    transform: scale(1.2);
+
+.gallery-img {
+  max-width: 70%;
+  height: auto;
+  object-fit: cover;
 }
 
-.gallery-image img {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-}
-
-.image1 {
-    grid-area: image1;
-}
-
-.image2 {
-    grid-area: image2;
-}
-
-.image3 {
-    grid-area: image3;
-}
-
-.image4 {
-    grid-area: image4;
-}
-
-@media (max-width: 568px) {
-    body {
-        background-color: black;
-    }
-    .gallery {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "image1" "image2" "image3" "image4"
-        ;
-        width: 100%;
-    }
+.gallery-img:hover {
+  opacity: .7;
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/72db12224a.js" crossorigin="anonymous"></script>
+    <title>Add a Wish</title>
+</head>
+<body>
+    <h1>My stereotype travel list&nbsp; <i class="fas fa-globe-africa"></i>&nbsp;<i class="fas fa-plane"></i>&nbsp;<i class="fas fa-map-marked-alt"></i>&nbsp;<i class="fas fa-suitcase-rolling"></i>&nbsp;
+        <i class="fas fa-umbrella-beach"></i>&nbsp;<i class="fas fa-snowboarding"></i> </h1>
+    <hr>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="text" name="description" placeholder="insert image description">
+        <label for="file">Add a photo...</label>
+        <input type="file" name="userFile">
+        <label for="wish">Where do you want to go..?</label>
+        <input type="text" name="wish" id="wish">
+
+        <button type="submit">+</button>
+    </form>
+    <h1><a href="/">All places&nbsp; <i class="fas fa-plane"></i></a></h1>
+    <h1><a href="/random">Spin the Globe&nbsp;<i class="fas fa-globe-africa"></i></a></h1>
+</body>
+</html>

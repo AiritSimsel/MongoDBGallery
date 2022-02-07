@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/72db12224a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Mongo file upload</h1>
-    <hr>
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-        <input type="text" name="description" placeholder="insert description e.g. image1">
-        <input type="file" name="userFile">
-
-        <button type="submit">Submit</button>
-    </form>
+    <h1><a href="/admin">New Wish&nbsp; <i class="fas fa-plane"></i></a></h1>
+    <h1><a href="/random">Spin the Globe&nbsp;<i class="fas fa-globe-africa"></i></a></h1>
+    <div class="container">
+        <div class="/">
+            <div class="gallery-grid">
+            <figure class="gallery-frame">
+            <% item.forEach(function(element) { %>
+               <div class="<%= element.imageDescription %>">
+                <img src="<%= element.image %>" alt="<%= element.imageDescription %>" class="gallery-img">
+                <figcaption><%= element.wish %></figcaption>
+            </div> 
+            <% }) %>
+            </figure>
+        </div>
+        </div>
+    </div>
 </body>
 </html>
